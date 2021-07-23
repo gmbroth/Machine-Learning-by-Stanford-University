@@ -1,0 +1,96 @@
+
+Lessons Learned
+
+Use column vectors, particularly when the course materials say "vector." I
+see that I keep using a row vector when column is called for. Yes, transposition
+can turn a row vector into a column but its an extra step that's unnecessary if
+I make a column vector in the first place. Hmm, in fact, transpositions 
+everywhere are a red flag that something's wrong.
+
+The bias column of all one values is added to X; the bias column of theta is
+present in theta (we don't "add" it) and is a real number generally not 1. Just
+keep the difference in mind.
+
+The word "parameters" refers to Theta values; X values are the data.
+
+===========================================================================
+
+10.6.19
+Fix broken app, might need to restart Octave. Next, save a backup copy of the
+working solution. Update 10.7.19: restart did the trick.
+
+10.5.19
+I think backprop is working now! I added regularization for the gradients and
+the numerical check passed. Both the cost and gradients are regularized; I might
+want to think about that. See what's next in the instructions.
+
+Also, clean up the code to remove debugging statements and add explanatory notes
+to help me the next time I visit the program.
+
+Perhaps write a statement about everything that is involved: forward prop,
+regularization, gradients, etc.
+
+A big challenge would be to replace the for-loop with a vectorized solution!
+
+10.4.19
+The for-loop is working properly now. Continue by implementing step 5.
+
+10.3.19
+Greek letter is sigma. Christ. Something's wrong with my backprop calculations.
+I'm looking at the working solution but it's fully vectorized which doesn't
+help much with my loop solution. Maybe look online for a looping solution? Yes,
+found a looping example online; look it over carefully.
+
+10.2.19
+First, what's  the name of the greek letter I'm calling funky? Rename it properly.
+Second, is my funky_2 calculation correct? A 26x25 matrix? There are 25 nodes
+in layer 2. Plus one for the bias. Check the notes; maybe I was supposed to 
+remove something before doing the backprop math...
+
+10.1.19
+Ok, I think I've missed the point. I'm iterating each of the m samples but each
+individual sample is run through *all* activation units in both layers 2 and 3.
+I was trying to run each sample through each unit in the layer individually.
+
+Here's the PDF document: file:///C:/Users/garry/Training/Machine%20Learning/Assignments/machine-learning-ex4/ex4.pdf
+Open files are ex4.m, nnCostFunction, predict and ReadMe.txt.
+Folder is ex4garry.
+
+9.30.19
+Take a look at predict.m: it does forward prop and the values of activation
+parameters may be helpful.
+
+9.29.16
+Sort out the sizes at line 96 of nnCostFunction.  I want to mutliply a_1 by
+theta but am getting compatibility errors.
+
+9.26.19
+sigmoid.m and sigmoidGradient.m completed. Take a close look at the random
+initialization function, particularly the part about the bias column. I think
+that column must be randomly initialized as well.
+
+9.25.19
+Regularization calculated correctly! Time for back-prop!
+
+9.24.19
+Fuck yeah! I fixed an error in the computation and now get the right answer. I was
+then able to vectorize the inner "for k" look, simplifying it out of existence. I
+suspect there's a vectorized solution for the whole shebang but will move on to
+regularization next.
+
+9.23.19
+I'm getting the wrong cost, off by a factor of around 4. Double-check the cost
+algorithm in the PDF document which seems to be a different formula than the
+one in the lecture notes. Also check that both formulas are not producing the
+same number as that would be ... odd. Perhaps I'm accumulating the sum incorrectly?
+Not sure what else could be wrong. My result is of the correct magnitude (IOW,
+I'm in the ballpark) but not the correct value. Is ex4 passing me the correct
+data?
+
+9.18.19
+So the instructions seem to say that the hypothesis should be the raw sigmoid
+value and I'll get the cost by comparing that number (0-1) with the known Y
+result which is either 0 or 1 in the indicated vector position. Hmmm, this seems
+a bit wrong as I believe the values I generated in my hypothesis were real
+numbers *not* in the sigmoid range 0-1.
+

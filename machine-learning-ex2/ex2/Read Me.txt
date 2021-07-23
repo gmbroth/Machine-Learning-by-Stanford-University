@@ -1,0 +1,27 @@
+
+9.5.19
+
+Study what I've done; it's very cool how adding features makes possible
+a decision boundary that's not a straight line. Continue the remainder of
+the exercise. Done: very cool exercise!
+
+9.4.19
+
+Pick up in the costFunctionReg.m where I've calculated a regularization cost
+but not yet added it to J.
+
+8.28.19
+
+Look at predict.m to understand how it produces probability values for each
+row in X give the optimized/minimzed theta values.
+
+8.27.19
+
+I changed the value of alpha (1.0) to produce values matching what's expected
+in ex2. Run the next step in ex2 and confirm I'm getting the expected 
+gradient outcome.
+
+
+8.18.19
+
+This is my vectorized implementation of the assignment.

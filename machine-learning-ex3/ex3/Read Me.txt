@@ -1,0 +1,15 @@
+
+9.17.19
+
+See predict.m. Well, hell, it seems to be working! Review for understanding.
+Next: resume lecture on back propagation.
+
+9.16.19
+
+Left off working predictOneVsAll.m:
+1. Clean up the code.
+2. Review the code to be sure I understand what's going on.
+3. Compare my solution with the class solution.
+
+Pick with the next part of the assignment.
+
