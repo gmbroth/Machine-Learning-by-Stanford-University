@@ -1,2 +1,2 @@
 # Machine-Learning-by-Stanford-University
-Andrew Ng's ML course
+My assignment solutions (in Octave) for Andrew Ng's Machine Learning course
